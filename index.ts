@@ -4,8 +4,8 @@
  */
 
 import {sourceConnection, targetConnection} from "./config/mongodb";
+
 import type {IndexDefinition} from "mongoose";
-import mongoose from "mongoose";
 
 type key = {[key: string]: string | number};
 type IndexDescription = IndexDefinition & {key: key};
@@ -19,8 +19,6 @@ await Promise.all(
   databases.map(async ({name: databaseName}) => {
     // These databases should never be copied
     if (["admin", "local"].includes(databaseName)) return;
-
-    return;
 
     const sourceDb = sourceConnection.useDb(databaseName);
     const targetDb = targetConnection.useDb(databaseName);
@@ -49,7 +47,7 @@ await Promise.all(
           const stream = sourceDb.collection(collectionName).find().stream();
 
           // Insert every document into the target collection
-          stream.on("data", async (document: mongoose.Document) => {
+          stream.on("data", async (document) => {
             targetCollection.insertOne(document).catch(() => {}); // Let the insertion fail, assuming any errors are due to a duplicate already in place not satifying the indexes (like when you've ran multiple migrations)
           });
 
