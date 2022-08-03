@@ -1,5 +1,5 @@
 {
-  "name": "mongdb-migrate-between-clusters",
+  "name": "mongodb-migrate-between-clusters",
   "version": "1.0.0",
   "description": "This project can be used to migrate all collections and documents from one MongoDB cluster to another MongoDB cluster",
   "main": "index.js",

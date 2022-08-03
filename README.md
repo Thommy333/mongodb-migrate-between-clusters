@@ -1,4 +1,4 @@
-# mongdb-migrate-between-clusters
+# mongodb-migrate-between-clusters
 
 This is a minimal approach to use Mongoose to migrate all collections and documents from one MongoDB cluster (source) to another MongoDB cluster (target).
 The source cluster is mapped, and any indexes and data from the source collections are re-created inside the target cluster.
