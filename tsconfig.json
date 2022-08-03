@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": ["ES2022", "DOM"],
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "removeComments": true,
+    "rootDir": ".",
+    "target": "ES2017",
+    "typeRoots": ["src/@types", "node_modules/@types"]
+  }
+}
