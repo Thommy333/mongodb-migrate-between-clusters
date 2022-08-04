@@ -25,7 +25,8 @@ await Promise.all(
 
     const collections = await sourceDb.db.listCollections().toArray();
 
-    await Promise.all(collections.map(async ({name: collectionName}) => {
+    await Promise.all(
+      collections.map(async ({name: collectionName}) => {
         return new Promise<void>(async (resolve, reject) => {
           // Log progress
           ++connectionsOpen;
