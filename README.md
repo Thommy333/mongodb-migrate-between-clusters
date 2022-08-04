@@ -9,7 +9,7 @@ The source cluster is mapped, and any indexes and data from the source collectio
 
 For usage, you will need Node.js (v14 or later) and NPM installed in your environement.
 
-The project uses top-level awaits, so use a recent version of Node: > 14.
+The project uses top-level awaits, so use a recent version of Node: >14.
 
 ## Install
 
